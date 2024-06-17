@@ -7,8 +7,13 @@ import infrastructure.DatabaseManager;
 import java.util.ArrayList;
 import java.util.List;
 
+//Classe responsável pelas operações com o banco de dados
+//Model da aplicação
 public class TaskDAO implements TaskDatabase {
 
+    //Não possui dependências!
+
+    //Métodos
     @Override
     public void insertTask(String description) {
         try {
@@ -21,6 +26,7 @@ public class TaskDAO implements TaskDatabase {
             System.out.println("Error inserting task: " + e.getMessage());
         }
     }
+    //...
 
     @Override
     public void updateTask(int taskId, String description, boolean isDone) {

@@ -11,10 +11,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
+//Classe que define uma TaskView
 public class TaskViewImpl extends JFrame implements TaskView, TaskListener {
     private DefaultTableModel table;
-    private final TaskViewModel taskViewModel;
+    private final TaskViewModel taskViewModel; //<-- Referência para a classe ViewModel
 
+    //Construtor + Injeção das dependências para comunicação com o ViewModel
     public TaskViewImpl(TaskPublisher taskPublisher, TaskViewModel taskViewModel) {
         setTitle("ToDo List");
         setSize(600, 400);
